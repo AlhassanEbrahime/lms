@@ -31,7 +31,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.FileField(upload_to="user_folder", default="default-uer.jpg", null=True, blank=True)
     full_name = models.CharField(max_length=150) 
-    country = models.CharField(max_length=150,null=True,blank=True)
+    country = models.CharField(max_length=150,null=True,blank=True)  
     about = models.TextField(null=True, blank=True)
     doj = models.DateTimeField(auto_now_add=True)
     
